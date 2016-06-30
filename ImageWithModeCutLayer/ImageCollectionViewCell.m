@@ -23,12 +23,12 @@
         self.backgroundColor = [UIColor yellowColor];
 
         self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
+        self.imageView.layer.masksToBounds = YES;
         [self addSubview:self.imageView];
 
         [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self);
         }];
-
 
     }
     return self;

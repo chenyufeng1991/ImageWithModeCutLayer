@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong) UICollectionView *myCollectionView;
 @property (nonatomic, strong) NSMutableArray *collectionViewArray;
+@property (nonatomic, strong) NSMutableArray *imageContentModeArray;
 
 @end
 
@@ -32,10 +33,32 @@
     self.myCollectionView.dataSource = self;
     [self.view addSubview:self.myCollectionView];
 
-    self.collectionViewArray = [[NSMutableArray alloc] initWithCapacity:12];
-    for (int i = 0; i < 12 ; i++)
+    self.collectionViewArray = [[NSMutableArray alloc] initWithCapacity:13];
+    for (int i = 0; i < 13 ; i++)
     {
         [self.collectionViewArray addObject:[UIImage imageNamed:@"ford"]];
+    }
+    /**
+     typedef NS_ENUM(NSInteger, UIViewContentMode) {
+     UIViewContentModeScaleToFill,
+     UIViewContentModeScaleAspectFit,      // contents scaled to fit with fixed aspect. remainder is transparent
+     UIViewContentModeScaleAspectFill,     // contents scaled to fill with fixed aspect. some portion of content may be clipped.
+     UIViewContentModeRedraw,              // redraw on bounds change (calls -setNeedsDisplay)
+     UIViewContentModeCenter,              // contents remain same size. positioned adjusted.
+     UIViewContentModeTop,
+     UIViewContentModeBottom,
+     UIViewContentModeLeft,
+     UIViewContentModeRight,
+     UIViewContentModeTopLeft,
+     UIViewContentModeTopRight,
+     UIViewContentModeBottomLeft,
+     UIViewContentModeBottomRight,
+     };
+     */
+    self.imageContentModeArray = [[NSMutableArray alloc] initWithCapacity:13];
+    for (int i = 0; i < 13; i++)
+    {
+        [self.imageContentModeArray addObject:[NSNumber numberWithInt:i]];
     }
 }
 
@@ -50,12 +73,8 @@
 {
     ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ImageCollectionViewCell" forIndexPath:indexPath];
 
-    if (cell == nil)
-    {
-        cell = [[ImageCollectionViewCell alloc] init];
-    }
-
     cell.imageView.image = self.collectionViewArray[indexPath.row];
+    cell.imageView.contentMode = [self.imageContentModeArray[indexPath.row] integerValue];
 
     return cell;
 }
@@ -64,7 +83,7 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(80, 80);
+    return CGSizeMake([[UIScreen mainScreen] bounds].size.width / 3 - 20, [[UIScreen mainScreen] bounds].size.width / 3 - 20);
 }
 
 @end
