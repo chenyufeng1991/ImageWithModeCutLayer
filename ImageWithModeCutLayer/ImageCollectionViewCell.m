@@ -7,10 +7,9 @@
 //
 
 #import "ImageCollectionViewCell.h"
+#import "Masonry.h"
 
 @interface ImageCollectionViewCell()
-
-@property (nonatomic, strong) UIImageView *imageView;
 
 @end
 
@@ -19,11 +18,16 @@
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    if (self) {
+    if (self)
+    {
+        self.backgroundColor = [UIColor yellowColor];
 
-        
+        self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
+        [self addSubview:self.imageView];
 
-
+        [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self);
+        }];
 
 
     }
