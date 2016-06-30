@@ -12,6 +12,8 @@
 		711AEA031D24AEB50048A859 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 711AEA021D24AEB50048A859 /* MainViewController.m */; };
 		711AEA081D24AEB50048A859 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 711AEA071D24AEB50048A859 /* Assets.xcassets */; };
 		711AEA0B1D24AEB50048A859 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 711AEA091D24AEB50048A859 /* LaunchScreen.storyboard */; };
+		711AEA151D24B5330048A859 /* ImageContentModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 711AEA131D24B5330048A859 /* ImageContentModeViewController.m */; };
+		711AEA161D24B5330048A859 /* ImageContentModeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 711AEA141D24B5330048A859 /* ImageContentModeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,9 @@
 		711AEA071D24AEB50048A859 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		711AEA0A1D24AEB50048A859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		711AEA0C1D24AEB50048A859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		711AEA121D24B5330048A859 /* ImageContentModeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageContentModeViewController.h; sourceTree = "<group>"; };
+		711AEA131D24B5330048A859 /* ImageContentModeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageContentModeViewController.m; sourceTree = "<group>"; };
+		711AEA141D24B5330048A859 /* ImageContentModeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageContentModeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +65,9 @@
 				711AE9FF1D24AEB50048A859 /* AppDelegate.m */,
 				711AEA011D24AEB50048A859 /* MainViewController.h */,
 				711AEA021D24AEB50048A859 /* MainViewController.m */,
+				711AEA121D24B5330048A859 /* ImageContentModeViewController.h */,
+				711AEA131D24B5330048A859 /* ImageContentModeViewController.m */,
+				711AEA141D24B5330048A859 /* ImageContentModeViewController.xib */,
 				711AEA071D24AEB50048A859 /* Assets.xcassets */,
 				711AEA091D24AEB50048A859 /* LaunchScreen.storyboard */,
 				711AEA0C1D24AEB50048A859 /* Info.plist */,
@@ -133,6 +141,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				711AEA161D24B5330048A859 /* ImageContentModeViewController.xib in Resources */,
 				711AEA0B1D24AEB50048A859 /* LaunchScreen.storyboard in Resources */,
 				711AEA081D24AEB50048A859 /* Assets.xcassets in Resources */,
 			);
@@ -147,6 +156,7 @@
 			files = (
 				711AEA031D24AEB50048A859 /* MainViewController.m in Sources */,
 				711AEA001D24AEB50048A859 /* AppDelegate.m in Sources */,
+				711AEA151D24B5330048A859 /* ImageContentModeViewController.m in Sources */,
 				711AE9FD1D24AEB50048A859 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
