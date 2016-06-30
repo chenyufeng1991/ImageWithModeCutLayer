@@ -44,7 +44,7 @@
 
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     self.myCollectionView = [[UICollectionView alloc] initWithFrame:[[UIScreen mainScreen] bounds] collectionViewLayout:flow];
-    self.myCollectionView.backgroundColor = [UIColor whiteColor];
+    self.myCollectionView.backgroundColor = [UIColor blackColor];
     [self.myCollectionView registerClass:[ImageCollectionViewCell class] forCellWithReuseIdentifier:@"ImageCollectionViewCell"];
     self.myCollectionView.delegate = self;
     self.myCollectionView.dataSource = self;
@@ -82,7 +82,12 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(80, 80);
+    return CGSizeMake(180, 180);
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 60.0f;
 }
 
 @end
