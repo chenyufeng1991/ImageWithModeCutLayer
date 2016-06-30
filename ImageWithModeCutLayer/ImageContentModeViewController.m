@@ -17,6 +17,23 @@
 
 @end
 
+/**
+ typedef NS_ENUM(NSInteger, UIViewContentMode) {
+ UIViewContentModeScaleToFill,
+ UIViewContentModeScaleAspectFit,      // contents scaled to fit with fixed aspect. remainder is transparent
+ UIViewContentModeScaleAspectFill,     // contents scaled to fill with fixed aspect. some portion of content may be clipped.
+ UIViewContentModeRedraw,              // redraw on bounds change (calls -setNeedsDisplay)
+ UIViewContentModeCenter,              // contents remain same size. positioned adjusted.
+ UIViewContentModeTop,
+ UIViewContentModeBottom,
+ UIViewContentModeLeft,
+ UIViewContentModeRight,
+ UIViewContentModeTopLeft,
+ UIViewContentModeTopRight,
+ UIViewContentModeBottomLeft,
+ UIViewContentModeBottomRight,
+ };
+ */
 @implementation ImageContentModeViewController
 
 - (void)viewDidLoad
@@ -34,32 +51,14 @@
     [self.view addSubview:self.myCollectionView];
 
     self.collectionViewArray = [[NSMutableArray alloc] initWithCapacity:13];
+    self.imageContentModeArray = [[NSMutableArray alloc] initWithCapacity:13];
     for (int i = 0; i < 13 ; i++)
     {
+        // 原图像大小：380*140
         [self.collectionViewArray addObject:[UIImage imageNamed:@"ford"]];
-    }
-    /**
-     typedef NS_ENUM(NSInteger, UIViewContentMode) {
-     UIViewContentModeScaleToFill,
-     UIViewContentModeScaleAspectFit,      // contents scaled to fit with fixed aspect. remainder is transparent
-     UIViewContentModeScaleAspectFill,     // contents scaled to fill with fixed aspect. some portion of content may be clipped.
-     UIViewContentModeRedraw,              // redraw on bounds change (calls -setNeedsDisplay)
-     UIViewContentModeCenter,              // contents remain same size. positioned adjusted.
-     UIViewContentModeTop,
-     UIViewContentModeBottom,
-     UIViewContentModeLeft,
-     UIViewContentModeRight,
-     UIViewContentModeTopLeft,
-     UIViewContentModeTopRight,
-     UIViewContentModeBottomLeft,
-     UIViewContentModeBottomRight,
-     };
-     */
-    self.imageContentModeArray = [[NSMutableArray alloc] initWithCapacity:13];
-    for (int i = 0; i < 13; i++)
-    {
         [self.imageContentModeArray addObject:[NSNumber numberWithInt:i]];
     }
+
 }
 
 #pragma mark - UICollectionView DataSource
@@ -83,7 +82,7 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake([[UIScreen mainScreen] bounds].size.width / 3 - 20, [[UIScreen mainScreen] bounds].size.width / 3 - 20);
+    return CGSizeMake(80, 80);
 }
 
 @end
