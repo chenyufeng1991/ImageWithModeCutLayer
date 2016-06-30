@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E66C7EC9014094EE5D226FD /* libPods-ImageWithModeCutLayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCC9437375685B991E85CEE /* libPods-ImageWithModeCutLayer.a */; };
 		711AE9FD1D24AEB50048A859 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 711AE9FC1D24AEB50048A859 /* main.m */; };
 		711AEA001D24AEB50048A859 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 711AE9FF1D24AEB50048A859 /* AppDelegate.m */; };
 		711AEA031D24AEB50048A859 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 711AEA021D24AEB50048A859 /* MainViewController.m */; };
@@ -14,9 +15,12 @@
 		711AEA0B1D24AEB50048A859 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 711AEA091D24AEB50048A859 /* LaunchScreen.storyboard */; };
 		711AEA151D24B5330048A859 /* ImageContentModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 711AEA131D24B5330048A859 /* ImageContentModeViewController.m */; };
 		711AEA161D24B5330048A859 /* ImageContentModeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 711AEA141D24B5330048A859 /* ImageContentModeViewController.xib */; };
+		711AEA1C1D24B8D80048A859 /* ImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 711AEA1A1D24B8D80048A859 /* ImageCollectionViewCell.m */; };
+		711AEA1D1D24B8D80048A859 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 711AEA1B1D24B8D80048A859 /* ImageCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5284A32A041E43DE80CEABED /* Pods-ImageWithModeCutLayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageWithModeCutLayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageWithModeCutLayer/Pods-ImageWithModeCutLayer.release.xcconfig"; sourceTree = "<group>"; };
 		711AE9F81D24AEB50048A859 /* ImageWithModeCutLayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageWithModeCutLayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		711AE9FC1D24AEB50048A859 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		711AE9FE1D24AEB50048A859 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -29,6 +33,11 @@
 		711AEA121D24B5330048A859 /* ImageContentModeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageContentModeViewController.h; sourceTree = "<group>"; };
 		711AEA131D24B5330048A859 /* ImageContentModeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageContentModeViewController.m; sourceTree = "<group>"; };
 		711AEA141D24B5330048A859 /* ImageContentModeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageContentModeViewController.xib; sourceTree = "<group>"; };
+		711AEA191D24B8D80048A859 /* ImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCollectionViewCell.h; sourceTree = "<group>"; };
+		711AEA1A1D24B8D80048A859 /* ImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCollectionViewCell.m; sourceTree = "<group>"; };
+		711AEA1B1D24B8D80048A859 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		9BCC9437375685B991E85CEE /* libPods-ImageWithModeCutLayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ImageWithModeCutLayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F347CCD0F847CB3C6A1EE49 /* Pods-ImageWithModeCutLayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageWithModeCutLayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageWithModeCutLayer/Pods-ImageWithModeCutLayer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +45,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E66C7EC9014094EE5D226FD /* libPods-ImageWithModeCutLayer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A945DC4C1F963721A36EDD0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F347CCD0F847CB3C6A1EE49 /* Pods-ImageWithModeCutLayer.debug.xcconfig */,
+				5284A32A041E43DE80CEABED /* Pods-ImageWithModeCutLayer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		711AE9EF1D24AEB50048A859 = {
 			isa = PBXGroup;
 			children = (
 				711AE9FA1D24AEB50048A859 /* ImageWithModeCutLayer */,
 				711AE9F91D24AEB50048A859 /* Products */,
+				2A945DC4C1F963721A36EDD0 /* Pods */,
+				DD2F8B03D4F00B10348A023C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,13 +82,11 @@
 		711AE9FA1D24AEB50048A859 /* ImageWithModeCutLayer */ = {
 			isa = PBXGroup;
 			children = (
+				711AEA171D24B7750048A859 /* ImageContentMode */,
 				711AE9FE1D24AEB50048A859 /* AppDelegate.h */,
 				711AE9FF1D24AEB50048A859 /* AppDelegate.m */,
 				711AEA011D24AEB50048A859 /* MainViewController.h */,
 				711AEA021D24AEB50048A859 /* MainViewController.m */,
-				711AEA121D24B5330048A859 /* ImageContentModeViewController.h */,
-				711AEA131D24B5330048A859 /* ImageContentModeViewController.m */,
-				711AEA141D24B5330048A859 /* ImageContentModeViewController.xib */,
 				711AEA071D24AEB50048A859 /* Assets.xcassets */,
 				711AEA091D24AEB50048A859 /* LaunchScreen.storyboard */,
 				711AEA0C1D24AEB50048A859 /* Info.plist */,
@@ -84,6 +103,35 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		711AEA171D24B7750048A859 /* ImageContentMode */ = {
+			isa = PBXGroup;
+			children = (
+				711AEA181D24B7900048A859 /* CollectionViewCell */,
+				711AEA121D24B5330048A859 /* ImageContentModeViewController.h */,
+				711AEA131D24B5330048A859 /* ImageContentModeViewController.m */,
+				711AEA141D24B5330048A859 /* ImageContentModeViewController.xib */,
+			);
+			name = ImageContentMode;
+			sourceTree = "<group>";
+		};
+		711AEA181D24B7900048A859 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				711AEA191D24B8D80048A859 /* ImageCollectionViewCell.h */,
+				711AEA1A1D24B8D80048A859 /* ImageCollectionViewCell.m */,
+				711AEA1B1D24B8D80048A859 /* ImageCollectionViewCell.xib */,
+			);
+			name = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		DD2F8B03D4F00B10348A023C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9BCC9437375685B991E85CEE /* libPods-ImageWithModeCutLayer.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,9 +139,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 711AEA0F1D24AEB50048A859 /* Build configuration list for PBXNativeTarget "ImageWithModeCutLayer" */;
 			buildPhases = (
+				14732011A093E6B1D55C16FF /* [CP] Check Pods Manifest.lock */,
 				711AE9F41D24AEB50048A859 /* Sources */,
 				711AE9F51D24AEB50048A859 /* Frameworks */,
 				711AE9F61D24AEB50048A859 /* Resources */,
+				EE1DD6A6F6EE5D86F9D87BAA /* [CP] Embed Pods Frameworks */,
+				7E550061E9F93537A3D08599 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,11 +194,60 @@
 			files = (
 				711AEA161D24B5330048A859 /* ImageContentModeViewController.xib in Resources */,
 				711AEA0B1D24AEB50048A859 /* LaunchScreen.storyboard in Resources */,
+				711AEA1D1D24B8D80048A859 /* ImageCollectionViewCell.xib in Resources */,
 				711AEA081D24AEB50048A859 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14732011A093E6B1D55C16FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7E550061E9F93537A3D08599 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImageWithModeCutLayer/Pods-ImageWithModeCutLayer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE1DD6A6F6EE5D86F9D87BAA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImageWithModeCutLayer/Pods-ImageWithModeCutLayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		711AE9F41D24AEB50048A859 /* Sources */ = {
@@ -156,6 +256,7 @@
 			files = (
 				711AEA031D24AEB50048A859 /* MainViewController.m in Sources */,
 				711AEA001D24AEB50048A859 /* AppDelegate.m in Sources */,
+				711AEA1C1D24B8D80048A859 /* ImageCollectionViewCell.m in Sources */,
 				711AEA151D24B5330048A859 /* ImageContentModeViewController.m in Sources */,
 				711AE9FD1D24AEB50048A859 /* main.m in Sources */,
 			);
@@ -259,6 +360,7 @@
 		};
 		711AEA101D24AEB50048A859 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F347CCD0F847CB3C6A1EE49 /* Pods-ImageWithModeCutLayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ImageWithModeCutLayer/Info.plist;
@@ -270,6 +372,7 @@
 		};
 		711AEA111D24AEB50048A859 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5284A32A041E43DE80CEABED /* Pods-ImageWithModeCutLayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ImageWithModeCutLayer/Info.plist;
@@ -298,6 +401,7 @@
 				711AEA111D24AEB50048A859 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
