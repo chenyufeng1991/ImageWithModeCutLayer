@@ -78,6 +78,11 @@
     NSLog(@"self.view.layer.sublayers = %@",subLayerArray);
 
 
+
+    // contents,layer中存放的内容，这里返回的是CGImage类型
+    id layerContent = self.redView.layer.contents;
+    NSLog(@"self.redView.layer.contents = %@",layerContent);
+    NSLog(@"self.redView.layer.contentsRect = %@",NSStringFromCGRect(self.redView.layer.contentsRect));
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -93,14 +98,6 @@
     NSLog(@"redView.frame = %@,redLayer.frame = %@",NSStringFromCGRect(self.redView.frame),NSStringFromCGRect(redLayer.frame));
 
     NSLog(@"fordImage.size = %@",NSStringFromCGSize(self.fordImage.size)); // 图片的原始大小
-
-
-
-    
-
-
-
-
 }
 
 
