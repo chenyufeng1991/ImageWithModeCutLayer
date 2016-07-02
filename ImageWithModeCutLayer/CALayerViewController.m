@@ -12,7 +12,8 @@
 
 @interface CALayerViewController ()
 
-@property (nonatomic, strong) UIView *redView;
+@property (nonatomic, strong) UIImageView *redView;
+@property (nonatomic, strong) UIImage *fordImage;
 
 @end
 
@@ -22,7 +23,7 @@
 {
     [super viewDidLoad];
 
-    self.redView = [[UIView alloc] initWithFrame:CGRectMake(0, 50, 200, 200)];
+    self.redView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 50, 200, 200)];
     self.redView.backgroundColor = [UIColor redColor];
     [self.view addSubview:self.redView];
     [self.redView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -51,6 +52,22 @@
     self.redView.layer.shadowRadius = 10;
 
 
+    // 设置超过layer区域部分是否截掉
+    self.redView.layer.masksToBounds = NO;
+
+
+    /**
+     *  在ImageView中加入一张图片
+     self.redView.layer.masksToBounds = YES;时可以把超出layer部分截掉。
+     */
+
+    self.fordImage = [UIImage imageNamed:@"ford"];
+    self.redView.contentMode = UIViewContentModeScaleAspectFill;
+    self.redView.image = self.fordImage;
+
+
+
+
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -64,6 +81,8 @@
     NSLog(@"redLayer.zPosition = %f",redLayer.zPosition);
     NSLog(@"redLayer.anchorPoint = %@",NSStringFromCGPoint(redLayer.anchorPoint));
     NSLog(@"redView.frame = %@,redLayer.frame = %@",NSStringFromCGRect(self.redView.frame),NSStringFromCGRect(redLayer.frame));
+
+    NSLog(@"fordImage.size = %@",NSStringFromCGSize(self.fordImage.size)); // 图片的原始大小
 
 
 }
