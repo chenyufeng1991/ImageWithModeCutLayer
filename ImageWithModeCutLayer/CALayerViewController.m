@@ -73,6 +73,10 @@
     CALayer *selfViewLayer = self.view.layer;
     NSLog(@"superLayer = %@,selfViewLayer = %@",superLayer,selfViewLayer);
 
+    // 子视图, 打断点可以看到子图层的详细参数，可以看到UIView是作为Layer的delegate。
+    NSArray *subLayerArray = self.view.layer.sublayers;
+    NSLog(@"self.view.layer.sublayers = %@",subLayerArray);
+
 
 }
 
