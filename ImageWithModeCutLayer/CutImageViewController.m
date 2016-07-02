@@ -86,7 +86,7 @@
     {
         // imageView的宽高比 > image的宽高比
         newImageSize.width = originImageSize.width;
-        newImageSize.height = (originImageSize.width * imageViewSize.height) / imageViewSize.width;
+        newImageSize.height = imageViewSize.height * (originImageSize.width / imageViewSize.width);
 
         imageRef = CGImageCreateWithImageInRect([originImage CGImage], CGRectMake(0, fabs(originImageSize.height - newImageSize.height) / 2, newImageSize.width, newImageSize.height));
     }
@@ -94,7 +94,7 @@
     {
         // image的宽高比 > imageView的宽高比   ： 也就是说原始图片比较狭长
         newImageSize.height = originImageSize.height;
-        newImageSize.width = (originImageSize.height * imageViewSize.width) / imageViewSize.height;
+        newImageSize.width = imageViewSize.width * (originImageSize.height / imageViewSize.height);
 
         imageRef = CGImageCreateWithImageInRect([originImage CGImage], CGRectMake(fabs(originImageSize.width - newImageSize.width) / 2, 0, newImageSize.width, newImageSize.height));
     }
