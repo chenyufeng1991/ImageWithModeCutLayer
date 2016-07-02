@@ -19,6 +19,8 @@
 		711AEA1D1D24B8D80048A859 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 711AEA1B1D24B8D80048A859 /* ImageCollectionViewCell.xib */; };
 		711AEA271D27ADD40048A859 /* CutImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 711AEA251D27ADD40048A859 /* CutImageViewController.m */; };
 		711AEA281D27ADD40048A859 /* CutImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 711AEA261D27ADD40048A859 /* CutImageViewController.xib */; };
+		711AEA2D1D27D4370048A859 /* CALayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 711AEA2B1D27D4370048A859 /* CALayerViewController.m */; };
+		711AEA2E1D27D4370048A859 /* CALayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 711AEA2C1D27D4370048A859 /* CALayerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,9 @@
 		711AEA241D27ADD40048A859 /* CutImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CutImageViewController.h; sourceTree = "<group>"; };
 		711AEA251D27ADD40048A859 /* CutImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CutImageViewController.m; sourceTree = "<group>"; };
 		711AEA261D27ADD40048A859 /* CutImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CutImageViewController.xib; sourceTree = "<group>"; };
+		711AEA2A1D27D4370048A859 /* CALayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALayerViewController.h; sourceTree = "<group>"; };
+		711AEA2B1D27D4370048A859 /* CALayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CALayerViewController.m; sourceTree = "<group>"; };
+		711AEA2C1D27D4370048A859 /* CALayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CALayerViewController.xib; sourceTree = "<group>"; };
 		9BCC9437375685B991E85CEE /* libPods-ImageWithModeCutLayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ImageWithModeCutLayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F347CCD0F847CB3C6A1EE49 /* Pods-ImageWithModeCutLayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageWithModeCutLayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageWithModeCutLayer/Pods-ImageWithModeCutLayer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +92,7 @@
 		711AE9FA1D24AEB50048A859 /* ImageWithModeCutLayer */ = {
 			isa = PBXGroup;
 			children = (
+				711AEA291D27D4120048A859 /* CALayer */,
 				711AEA231D27AD970048A859 /* CutImage */,
 				711AEA171D24B7750048A859 /* ImageContentMode */,
 				711AE9FE1D24AEB50048A859 /* AppDelegate.h */,
@@ -138,6 +144,16 @@
 				711AEA261D27ADD40048A859 /* CutImageViewController.xib */,
 			);
 			name = CutImage;
+			sourceTree = "<group>";
+		};
+		711AEA291D27D4120048A859 /* CALayer */ = {
+			isa = PBXGroup;
+			children = (
+				711AEA2A1D27D4370048A859 /* CALayerViewController.h */,
+				711AEA2B1D27D4370048A859 /* CALayerViewController.m */,
+				711AEA2C1D27D4370048A859 /* CALayerViewController.xib */,
+			);
+			name = CALayer;
 			sourceTree = "<group>";
 		};
 		DD2F8B03D4F00B10348A023C /* Frameworks */ = {
@@ -210,6 +226,7 @@
 			files = (
 				711AEA281D27ADD40048A859 /* CutImageViewController.xib in Resources */,
 				711AEA161D24B5330048A859 /* ImageContentModeViewController.xib in Resources */,
+				711AEA2E1D27D4370048A859 /* CALayerViewController.xib in Resources */,
 				711AEA0B1D24AEB50048A859 /* LaunchScreen.storyboard in Resources */,
 				711AEA1D1D24B8D80048A859 /* ImageCollectionViewCell.xib in Resources */,
 				711AEA081D24AEB50048A859 /* Assets.xcassets in Resources */,
@@ -273,6 +290,7 @@
 			files = (
 				711AEA031D24AEB50048A859 /* MainViewController.m in Sources */,
 				711AEA271D27ADD40048A859 /* CutImageViewController.m in Sources */,
+				711AEA2D1D27D4370048A859 /* CALayerViewController.m in Sources */,
 				711AEA001D24AEB50048A859 /* AppDelegate.m in Sources */,
 				711AEA1C1D24B8D80048A859 /* ImageCollectionViewCell.m in Sources */,
 				711AEA151D24B5330048A859 /* ImageContentModeViewController.m in Sources */,
