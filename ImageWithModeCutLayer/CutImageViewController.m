@@ -51,7 +51,7 @@
     }];
 #endif
 
-#if 1
+#if 0
     // 使用UIViewContentModeScaleAspectFill属性和masksToBounds也可以实现类似裁剪的效果
     self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
     [self.imageView setImage:[UIImage imageNamed:@"ford"]];
@@ -70,7 +70,6 @@
 
 //裁剪图片
 /**
- *这里裁剪的原理
  *
  *
  */
