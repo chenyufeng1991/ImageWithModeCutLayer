@@ -38,6 +38,18 @@
     self.redView.layer.borderColor = [[UIColor blackColor] CGColor];
     self.redView.layer.borderWidth = 5;
 
+    // 可以通过修改layer的背景颜色从而修改UIView的背景颜色
+    self.redView.layer.backgroundColor = [[UIColor yellowColor] CGColor];
+
+    // 修改透明度
+    self.redView.layer.opacity = 0.5;
+
+    // 设置View的阴影
+    self.redView.layer.shadowColor = [[UIColor blueColor] CGColor];
+    self.redView.layer.shadowOffset = CGSizeMake(10, 10);
+    self.redView.layer.shadowOpacity = 1.0; // 一定要设置阴影的透明度，因为默认为0
+    self.redView.layer.shadowRadius = 10;
+
 
 }
 
