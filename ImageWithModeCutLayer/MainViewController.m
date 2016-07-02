@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "ImageContentModeViewController.h"
+#import "CutImageViewController.h"
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -27,14 +28,11 @@
     [super viewDidLoad];
 
     self.title = @"主界面";
-    self.tableViewArray = [[NSArray alloc] initWithObjects:@"缩放", nil];
+    self.tableViewArray = [[NSArray alloc] initWithObjects:@"缩放",@"裁剪", nil];
     self.myTableView = [[UITableView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.myTableView.delegate = self;
     self.myTableView.dataSource = self;
     [self.view addSubview:self.myTableView];
-
-
-
 
 }
 
@@ -73,11 +71,16 @@
         }
             break;
 
+        case 1:
+        {
+            CutImageViewController *vc = [[CutImageViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+
         default:
             break;
     }
-
-
 }
 
 
