@@ -14,6 +14,7 @@
 @property (nonatomic, strong) UICollectionView *myCollectionView;
 @property (nonatomic, strong) NSMutableArray *collectionViewArray;
 @property (nonatomic, strong) NSMutableArray *imageContentModeArray;
+@property (nonatomic, strong) NSMutableArray *contentModeDescArray;
 
 @end
 
@@ -59,6 +60,22 @@
         [self.imageContentModeArray addObject:[NSNumber numberWithInt:i]];
     }
 
+    self.contentModeDescArray = [[NSMutableArray alloc] initWithCapacity:13];
+    [self.contentModeDescArray addObject:@"ContentModeScaleToFill"];
+    [self.contentModeDescArray addObject:@"ContentModeScaleAspectFit"];
+    [self.contentModeDescArray addObject:@"ContentModeScaleAspectFill"];
+    [self.contentModeDescArray addObject:@"ContentModeRedraw"];
+    [self.contentModeDescArray addObject:@"ContentModeCenter"];
+    [self.contentModeDescArray addObject:@"ContentModeTop"];
+    [self.contentModeDescArray addObject:@"ContentModeBottom"];
+    [self.contentModeDescArray addObject:@"ContentModeLeft"];
+    [self.contentModeDescArray addObject:@"ContentModeRight"];
+    [self.contentModeDescArray addObject:@"ContentModeTopLeft"];
+    [self.contentModeDescArray addObject:@"ContentModeTopRight"];
+    [self.contentModeDescArray addObject:@"ContentModeBottomLeft"];
+    [self.contentModeDescArray addObject:@"ContentModeBottomRight"];
+
+
 }
 
 #pragma mark - UICollectionView DataSource
@@ -74,6 +91,7 @@
 
     cell.imageView.image = self.collectionViewArray[indexPath.row];
     cell.imageView.contentMode = [self.imageContentModeArray[indexPath.row] integerValue];
+    cell.descLabel.text = self.contentModeDescArray[indexPath.row];
 
     return cell;
 }
