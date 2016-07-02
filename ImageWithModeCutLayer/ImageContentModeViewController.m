@@ -18,23 +18,6 @@
 
 @end
 
-/**
- typedef NS_ENUM(NSInteger, UIViewContentMode) {
- UIViewContentModeScaleToFill,
- UIViewContentModeScaleAspectFit,      // contents scaled to fit with fixed aspect. remainder is transparent
- UIViewContentModeScaleAspectFill,     // contents scaled to fill with fixed aspect. some portion of content may be clipped.
- UIViewContentModeRedraw,              // redraw on bounds change (calls -setNeedsDisplay)
- UIViewContentModeCenter,              // contents remain same size. positioned adjusted.
- UIViewContentModeTop,
- UIViewContentModeBottom,
- UIViewContentModeLeft,
- UIViewContentModeRight,
- UIViewContentModeTopLeft,
- UIViewContentModeTopRight,
- UIViewContentModeBottomLeft,
- UIViewContentModeBottomRight,
- };
- */
 @implementation ImageContentModeViewController
 
 - (void)viewDidLoad
@@ -74,8 +57,6 @@
     [self.contentModeDescArray addObject:@"ContentModeTopRight"];
     [self.contentModeDescArray addObject:@"ContentModeBottomLeft"];
     [self.contentModeDescArray addObject:@"ContentModeBottomRight"];
-
-
 }
 
 #pragma mark - UICollectionView DataSource
@@ -107,5 +88,11 @@
 {
     return 60.0f;
 }
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return UIEdgeInsetsMake(0, 0, 20, 0);
+}
+
 
 @end

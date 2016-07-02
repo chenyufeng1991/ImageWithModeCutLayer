@@ -26,7 +26,10 @@
         self.imageView.layer.masksToBounds = YES;
         [self addSubview:self.imageView];
         [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self);
+            make.top.equalTo(self);
+            make.left.equalTo(self);
+            make.right.equalTo(self);
+            make.bottom.equalTo(self);
         }];
 
         self.descLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 80, 320, 20)];
