@@ -60,12 +60,18 @@
      *  在ImageView中加入一张图片
      self.redView.layer.masksToBounds = YES;时可以把超出layer部分截掉。
      */
-
     self.fordImage = [UIImage imageNamed:@"ford"];
     self.redView.contentMode = UIViewContentModeScaleAspectFill;
     self.redView.image = self.fordImage;
 
+    // hidden设置为YES会隐藏Layer，视图不可见
+    self.redView.layer.hidden = NO;
 
+
+    // 由于self.view是redView的父视图，所以self.view.layer同样也是redView.layer的父图层
+    CALayer *superLayer = self.redView.layer.superlayer;
+    CALayer *selfViewLayer = self.view.layer;
+    NSLog(@"superLayer = %@,selfViewLayer = %@",superLayer,selfViewLayer);
 
 
 }
@@ -83,6 +89,12 @@
     NSLog(@"redView.frame = %@,redLayer.frame = %@",NSStringFromCGRect(self.redView.frame),NSStringFromCGRect(redLayer.frame));
 
     NSLog(@"fordImage.size = %@",NSStringFromCGSize(self.fordImage.size)); // 图片的原始大小
+
+
+
+    
+
+
 
 
 }
